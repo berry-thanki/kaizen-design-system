@@ -1,0 +1,31 @@
+@import "~@cultureamp/kaizen-design-tokens/sass/color";
+
+.heading {
+  // @TODO - figure out fallbacks and i18n
+  font-family: "Greycliff CF", sans-serif;
+  // html:lang(he) & {
+  //   font-family: $ca-ideal-locale-he-font-family;
+  // }
+  // html:lang(ar) & {
+  //   font-family: $ca-ideal-locale-ar-font-family;
+  // }
+  color: $kz-color-wisteria-800;
+}
+
+// @TODO - pull these from Kaizen tokens
+$font-scale-map: (
+  ("0", 72px, 72px),
+  ("1", 36px, 36px),
+  ("2", 30px, 36px),
+  ("3", 22px, 24px),
+  ("4", 20px, 30px),
+  ("5", 18px, 24px),
+  ("6", 16px, 24px)
+);
+
+@each $scale, $font-size, $line-height in $font-scale-map {
+  .heading-#{$scale} {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
