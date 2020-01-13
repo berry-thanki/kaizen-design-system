@@ -29,3 +29,9 @@ $font-size-map: (
     line-height: $line-height;
   }
 }
+
+// @TODO not convinced this is an idea we should entertain
+// it also doesn't work
+.paragraph.link {
+  text-decoration: underline;
+}

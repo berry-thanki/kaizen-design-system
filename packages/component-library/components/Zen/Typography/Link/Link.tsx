@@ -34,21 +34,19 @@ export const Link = ({
   scale?: Scale
 } & BaseProps &
   Spacing) => {
+  // @TODO - bring forward functionality for existing link component
   if (target !== undefined) {
     // avoid exploitation of the window.opener API
     otherProps.rel = "noreferrer noopener"
   }
 
   let classes: string[] = [
+    "link",
     ...responsivePaddingClasses({ p, pt, pr, pb, pl, px, py }),
     ...responsiveMarginClasses({ m, mt, mr, mb, ml, mx, my }),
   ]
 
-  otherProps.className = classnames(
-    otherProps.className,
-    styles.link,
-    classes.join(" ")
-  )
+  otherProps.className = classnames(otherProps.className, classes.join(" "))
 
   return Base({ tag, children, ...otherProps })
 }

@@ -30,7 +30,6 @@ export const Paragraph = ({
 } & Spacing &
   BaseProps) => {
   let classes: string[] = [
-    styles["paragraph"],
     "paragraph",
     ...responsiveSizeClasses(scale),
     ...responsivePaddingClasses({ p, pt, pr, pb, pl, px, py }),
