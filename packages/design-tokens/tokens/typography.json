@@ -1,0 +1,66 @@
+{
+  "kz": {
+    "typography": {
+      "heading": [
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        },
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        },
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        },
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        },
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        },
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        },
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        }
+      ],
+      "paragraph": [
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        }
+      ],
+      "pre": [
+        {
+          "fontFamily": "",
+          "fontSize": "",
+          "lineHeight": "",
+          "letterSpacing": ""
+        }
+      ]
+    }
+  }
+}
