@@ -8,7 +8,7 @@ const styles = require("./Heading.module.scss")
 
 export const Heading = ({
   tag,
-  scale,
+  variant,
   children,
   p,
   pt,
@@ -25,14 +25,14 @@ export const Heading = ({
   mx,
   my,
   ...otherProps
-}: { scale: HeadingScale } & Spacing & BaseProps) => {
-  let inferredTag = tag === undefined ? translateScaleToTag(scale) : tag
+}: { variant: HeadingScale } & Spacing & BaseProps) => {
+  let inferredTag = tag === undefined ? translateScaleToTag(variant) : tag
 
   let classes: string[] = [
     ...responsivePaddingClasses({ p, pt, pr, pb, pl, px, py }),
     ...responsiveMarginClasses({ m, mt, mr, mb, ml, mx, my }),
     styles["heading"],
-    styles[`heading-${scale}`],
+    styles[`heading-${variant}`],
   ]
   otherProps.className = classnames(otherProps.className, classes.join(" "))
 

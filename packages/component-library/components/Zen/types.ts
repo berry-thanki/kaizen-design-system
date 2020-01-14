@@ -2,7 +2,7 @@ import { AriaAttributes } from "react"
 
 export type Safelist = AriaAttributes & {
   id?: string
-  className?: string
+  // classNameAndIRealiseImBreakingTheDesignSystem?: string // @TODO - experiment with this
   itemProp?: string
   itemScope?: string
   itemType?: string
@@ -12,6 +12,8 @@ export type Safelist = AriaAttributes & {
   title?: string
   role?: string
 }
+// @TODO add data attributes
+// @TODO enforce data-test-id (check name)?
 
 export type AllowedTags = {
   pre: HTMLPreElement

@@ -5,32 +5,32 @@ import { Heading, Link, Paragraph, Pre } from "../components/Zen/Typography"
 
 storiesOf("Kaizen", module)
   .add("Heading 0", () => (
-    <Heading tag="h1" scale="0">
+    <Heading tag="h1" variant="0">
       This is an example Heading
     </Heading>
   ))
   .add("Heading 1", () => (
-    <Heading scale="1" m="0">
+    <Heading variant="1" m="0">
       This is an example Heading
     </Heading>
   ))
   .add("Heading 2", () => (
-    <Heading scale="2">This is an example Heading</Heading>
+    <Heading variant="2">This is an example Heading</Heading>
   ))
   .add("Heading 3", () => (
-    <Heading scale="3">This is an example Heading</Heading>
+    <Heading variant="3">This is an example Heading</Heading>
   ))
   .add("Heading 4", () => (
-    <Heading scale="4">This is an example Heading</Heading>
+    <Heading variant="4">This is an example Heading</Heading>
   ))
   .add("Heading 5", () => (
-    <Heading scale="5">This is an example Heading</Heading>
+    <Heading variant="5">This is an example Heading</Heading>
   ))
   .add("Heading 6", () => (
-    <Heading scale="6">This is an example Heading</Heading>
+    <Heading variant="6">This is an example Heading</Heading>
   ))
   .add("Heading 1 - Responsive margin", () => (
-    <Heading scale="1" m={{ mobile: "2", desktop: "4" }}>
+    <Heading variant="1" m={{ mobile: "2", desktop: "4" }}>
       This is an example Heading
     </Heading>
   ))
