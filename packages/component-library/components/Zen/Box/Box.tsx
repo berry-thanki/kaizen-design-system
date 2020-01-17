@@ -30,7 +30,10 @@ export const Box = ({
 
   return (
     <div
-      style={Object.assign({}, style, { outline: "1px solid black" })}
+      style={Object.assign({}, style, {
+        border: "2px dotted #C4C5D4",
+        borderRadius: "3px",
+      })}
       className={classnames(classes.join(" "))}
     >
       {children}

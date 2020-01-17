@@ -1,6 +1,6 @@
 import { cleanup, render } from "@testing-library/react"
 import * as React from "react"
-import { AllowedTags, HeadingScale } from "../../types"
+import { AllowedTags, HeadingLevel } from "../../types"
 import { Heading } from "./index"
 
 afterEach(cleanup)
@@ -40,7 +40,7 @@ describe("<Heading />", () => {
   })
 
   describe("defaults to the correct HTML element", () => {
-    type TestObject = { scale: HeadingScale; el: keyof AllowedTags }
+    type TestObject = { scale: HeadingLevel; el: keyof AllowedTags }
     const testCases: TestObject[] = [
       { scale: "0", el: "h1" },
       { scale: "1", el: "h1" },

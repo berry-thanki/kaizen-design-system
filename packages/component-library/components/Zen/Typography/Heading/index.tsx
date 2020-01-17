@@ -1,5 +1,5 @@
 import classnames from "classnames"
-import { BaseProps, HeadingScale, Spacing } from "../../types"
+import { BaseProps, HeadingLevel, Spacing } from "../../types"
 import { Base } from "../Base"
 import { responsiveMarginClasses } from "../Spacing/margin"
 import { responsivePaddingClasses } from "../Spacing/padding"
@@ -8,7 +8,7 @@ const styles = require("./Heading.module.scss")
 
 export const Heading = ({
   tag,
-  variant,
+  level,
   children,
   p,
   pt,
@@ -25,21 +25,21 @@ export const Heading = ({
   mx,
   my,
   ...otherProps
-}: { variant: HeadingScale } & Spacing & BaseProps) => {
-  let inferredTag = tag === undefined ? translateScaleToTag(variant) : tag
+}: { level: HeadingLevel } & Spacing & BaseProps) => {
+  let inferredTag = tag === undefined ? translateScaleToTag(level) : tag
 
   let classes: string[] = [
     ...responsivePaddingClasses({ p, pt, pr, pb, pl, px, py }),
     ...responsiveMarginClasses({ m, mt, mr, mb, ml, mx, my }),
     styles["heading"],
-    styles[`heading-${variant}`],
+    styles[`heading-${level}`],
   ]
   otherProps.className = classnames(otherProps.className, classes.join(" "))
 
   return Base({ tag: inferredTag, children, ...otherProps })
 }
 
-const translateScaleToTag = (scale: HeadingScale) => {
+const translateScaleToTag = (scale: HeadingLevel) => {
   switch (scale) {
     case "0":
     case "1":

@@ -3,34 +3,43 @@ import * as React from "react"
 import Box from "../components/Zen/Box"
 import { Heading, Link, Paragraph, Pre } from "../components/Zen/Typography"
 
+// @TODO - container-based sizing
+// Explore the idea of a container that passes container widths
+// look at empty state component
+
+// @TODO - problems with people using the wrapper, then
+// undelying styles breaking
+
+// @TODO - link in react-router, does it appear differently as a child in paragraph?
+// name collisions and confusion around Kaizen link and RR link
 storiesOf("Kaizen", module)
   .add("Heading 0", () => (
-    <Heading tag="h1" variant="0">
+    <Heading tag="h1" level="0">
       This is an example Heading
     </Heading>
   ))
   .add("Heading 1", () => (
-    <Heading variant="1" m="0">
+    <Heading level="1" m="0">
       This is an example Heading
     </Heading>
   ))
   .add("Heading 2", () => (
-    <Heading variant="2">This is an example Heading</Heading>
+    <Heading level="2">This is an example Heading</Heading>
   ))
   .add("Heading 3", () => (
-    <Heading variant="3">This is an example Heading</Heading>
+    <Heading level="3">This is an example Heading</Heading>
   ))
   .add("Heading 4", () => (
-    <Heading variant="4">This is an example Heading</Heading>
+    <Heading level="4">This is an example Heading</Heading>
   ))
   .add("Heading 5", () => (
-    <Heading variant="5">This is an example Heading</Heading>
+    <Heading level="5">This is an example Heading</Heading>
   ))
   .add("Heading 6", () => (
-    <Heading variant="6">This is an example Heading</Heading>
+    <Heading level="6">This is an example Heading</Heading>
   ))
   .add("Heading 1 - Responsive margin", () => (
-    <Heading variant="1" m={{ mobile: "2", desktop: "4" }}>
+    <Heading level="1" m={{ mobile: "2", desktop: "4" }}>
       This is an example Heading
     </Heading>
   ))
@@ -166,5 +175,17 @@ storiesOf("Kaizen", module)
     <Paragraph>
       <Link href="">reprehenderit nemo voluptates</Link>
     </Paragraph>
+  ))
+  .add("Box", () => (
+    <Box m="2" p="2">
+      <Paragraph scale="sm">
+        Paragraphs can also be responsive. This is an large example Paragraph.
+        Lorem ipsum dolor sit{" "}
+        <strong>amet consectetur Aut, non vero suscipit odio </strong>culpa
+        quaerat distinctio perspiciatis consequatur repellendus nulla eaque
+        voluptates accusantium facilis exercitationem! Earum deserunt voluptatem
+        corporis expedita?
+      </Paragraph>
+    </Box>
   ))
   .add("Pre", () => <Pre>This is an example Paragraph</Pre>)

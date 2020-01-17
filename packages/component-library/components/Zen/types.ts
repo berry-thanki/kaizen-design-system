@@ -1,5 +1,7 @@
 import { AriaAttributes } from "react"
 
+//@TODO - variant to change to level
+
 export type Safelist = AriaAttributes & {
   id?: string
   // classNameAndIRealiseImBreakingTheDesignSystem?: string // @TODO - experiment with this
@@ -32,7 +34,7 @@ export type AllowedTags = {
 /**
  * Scale refers to difference in size of components within the same component family
  */
-export type Sizing = "xs" | "sm" | "md" | "lg" | "xl"
+export type Sizing = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
 
 export type GridFractions = "1/8" | "1/4" | "1/2" | "0" | "1" | "2" | "3" | "4"
 
@@ -57,7 +59,7 @@ export type ResponsiveSpacing =
 export type Padding = ResponsiveSpacing
 export type Margin = ResponsiveSpacing
 
-export type HeadingScale = "0" | "1" | "2" | "3" | "4" | "5" | "6"
+export type HeadingLevel = "0" | "1" | "2" | "3" | "4" | "5" | "6"
 
 /**
  * Every single prop should accept this
