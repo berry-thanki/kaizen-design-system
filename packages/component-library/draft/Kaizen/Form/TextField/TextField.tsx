@@ -1,3 +1,6 @@
+import classnames from "classnames"
+import * as React from "react"
+
 import { Icon } from "@kaizen/component-library/components/Icon"
 import { FieldGroup } from "@kaizen/component-library/draft"
 import { FieldMessage } from "@kaizen/component-library/draft"
@@ -7,12 +10,10 @@ const exclamationIcon = require("@kaizen/component-library/icons/exclamation.ico
   .default
 const successIcon = require("@kaizen/component-library/icons/success.icon.svg")
   .default
-import classnames from "classnames"
-import * as React from "react"
 
 const styles = require("./styles.scss")
 
-type TextField = React.FunctionComponent<{
+export type TextFieldProps = {
   id: string
   inputType?: InputType
   required?: boolean
@@ -30,9 +31,9 @@ type TextField = React.FunctionComponent<{
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => any
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => any
   name?: string
-}>
+}
 
-const TextField: TextField = ({
+export const TextField: React.FunctionComponent<TextFieldProps> = ({
   id,
   inputType,
   disabled = false,
@@ -139,5 +140,3 @@ const TextField: TextField = ({
     </FieldGroup>
   )
 }
-
-export default TextField

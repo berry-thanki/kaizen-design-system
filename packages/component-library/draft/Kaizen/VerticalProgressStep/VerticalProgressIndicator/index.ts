@@ -1,4 +1,1 @@
-export {
-  VerticalProgressIndicator,
-  Completion,
-} from "./VerticalProgressIndicator"
+export * from "./VerticalProgressIndicator"

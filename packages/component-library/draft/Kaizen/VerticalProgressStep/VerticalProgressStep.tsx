@@ -33,7 +33,7 @@ const CompletedStep = (props: CompletedStepProps) => {
   )
 }
 
-type CurrentStepProps = {
+export type CurrentStepProps = {
   name: string
   children?: React.ReactNode
   status: CurrentStepStatus

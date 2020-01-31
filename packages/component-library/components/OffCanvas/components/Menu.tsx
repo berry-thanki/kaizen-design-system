@@ -3,11 +3,11 @@ import * as React from "react"
 
 const styles = require("./Menu.module.scss")
 
-type Props = {
+type MenuProps = {
   links: any[]
 }
 
-const Menu = ({ links }: Props) => {
+const Menu = ({ links }: MenuProps) => {
   const indexOfFirstSecondaryLink = links.findIndex(
     link => link.props.secondary
   )

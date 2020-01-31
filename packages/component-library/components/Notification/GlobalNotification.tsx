@@ -3,15 +3,15 @@ import GenericNotification, {
   NotificationType,
 } from "./components/GenericNotification"
 
-type Props = {
+export type GlobalNotificationProps = {
   type: NotificationType
   children: React.ReactNode
   onHide?: () => void
   automationId?: string
 }
 
-const GlobalNotification = (props: Props) => (
+const GlobalNotification = (props: GlobalNotificationProps) => (
   <GenericNotification style="global" persistent={false} {...props} />
 )
 
-export default GlobalNotification
+export { GlobalNotification }

@@ -1,6 +1,6 @@
 import { cleanup, render } from "@testing-library/react"
 import * as React from "react"
-import Layout from "./Layout"
+import { Layout } from "./Layout"
 
 afterEach(cleanup)
 

@@ -14,4 +14,4 @@ IconButton.defaultProps = {
 
 IconButton.displayName = "IconButton"
 
-export default IconButton
+export { IconButton, IconButtonProps }

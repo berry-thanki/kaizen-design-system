@@ -1,11 +1,11 @@
 import classNames from "classnames"
 import * as React from "react"
-import Header from "./components/Header"
+import { Header } from "./components/Header"
 import Menu from "./components/Menu"
 
 const styles = require("./OffCanvas.module.scss")
 
-type Props = {
+export type OffCanvasProps = {
   links: any[]
   heading: string
   headerComponent: React.ReactNode
@@ -29,7 +29,7 @@ export const OffCanvasContext = React.createContext<OffCanvasContextProps>({
   resetVisibleMenus: () => {},
 })
 
-export class OffCanvas extends React.Component<Props> {
+export class OffCanvas extends React.Component<OffCanvasProps> {
   static defaultProps = {
     links: [],
     withTrigger: false,
@@ -60,10 +60,10 @@ export class OffCanvas extends React.Component<Props> {
 
 const withContextProvider = (Component: React.ComponentType<any>) => {
   return class OffCanvasWithContextProvider extends React.Component<
-    Props,
+    OffCanvasProps,
     State
   > {
-    constructor(props: Props) {
+    constructor(props: OffCanvasProps) {
       super(props)
 
       this.state = {
@@ -97,7 +97,7 @@ const withContextProvider = (Component: React.ComponentType<any>) => {
 }
 
 const withTrigger = (Component: React.ComponentType<any>) => {
-  return class OffCanvasWithTrigger extends React.Component<Props> {
+  return class OffCanvasWithTrigger extends React.Component<OffCanvasProps> {
     render() {
       return (
         <OffCanvasContext.Consumer>

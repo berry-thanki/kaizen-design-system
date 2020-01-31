@@ -3,7 +3,7 @@ import GenericNotification, {
   NotificationType,
 } from "./components/GenericNotification"
 
-type Props = {
+type InlineNotificationProps = {
   type: NotificationType
   title: string
   children: React.ReactNode
@@ -20,7 +20,7 @@ const InlineNotification = ({
   persistent,
   hideCloseIcon,
   ...otherProps
-}: Props) => (
+}: InlineNotificationProps) => (
   <GenericNotification
     style="inline"
     persistent={persistent || hideCloseIcon}
@@ -35,4 +35,4 @@ InlineNotification.defaultProps = {
   persistent: false,
 }
 
-export default InlineNotification
+export { InlineNotification }

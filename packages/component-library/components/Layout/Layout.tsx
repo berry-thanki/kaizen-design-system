@@ -113,4 +113,4 @@ const extractChildOfType = (
   return match
 }
 
-export default Layout
+export { Layout }

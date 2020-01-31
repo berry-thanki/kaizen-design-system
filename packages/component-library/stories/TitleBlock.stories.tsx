@@ -1,7 +1,8 @@
-import { Button } from "@kaizen/component-library/components/Button"
-import { TitleBlock } from "@kaizen/component-library/draft"
 import { storiesOf } from "@storybook/react"
 import * as React from "react"
+
+import { Button } from "@kaizen/component-library/components/Button"
+import { TitleBlock } from "@kaizen/component-library/draft"
 
 require("./TitleBlock.stories.scss")
 

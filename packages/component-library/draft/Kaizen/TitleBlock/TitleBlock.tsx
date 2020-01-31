@@ -4,7 +4,7 @@ import { Fragment, ReactNode } from "react"
 import * as React from "react"
 import Media from "react-media"
 
-import Icon from "@kaizen/component-library/components/Icon/Icon"
+import { Icon } from "@kaizen/component-library/components/Icon/Icon"
 import { MOBILE_QUERY } from "@kaizen/component-library/components/NavigationBar/constants"
 import { Tag } from "@kaizen/component-library/draft"
 const backIcon = require("@kaizen/component-library/icons/arrow-backward.icon.svg")
@@ -35,7 +35,7 @@ type Breadcrumb = {
   text: string
 }
 
-type Props = {
+export type TitleBlockProps = {
   title: string
   subtitle?: string
   breadcrumb?: Breadcrumb
@@ -49,7 +49,7 @@ type Props = {
   stickyColor?: Color
 }
 
-type State = {
+export type TitleBlockState = {
   useCompactSize: boolean
 }
 
@@ -57,7 +57,7 @@ const COMPACT_NAVIGATION_SCROLL_THRESHOLD = 5
 const meetsCompactThreshold = () =>
   (window.scrollY || window.pageYOffset) >= COMPACT_NAVIGATION_SCROLL_THRESHOLD
 
-class TitleBlock extends React.Component<Props, State> {
+class TitleBlock extends React.Component<TitleBlockProps, TitleBlockState> {
   state = {
     useCompactSize: meetsCompactThreshold(),
   }
@@ -222,4 +222,4 @@ class TitleBlock extends React.Component<Props, State> {
   }
 }
 
-export default TitleBlock
+export { TitleBlock }

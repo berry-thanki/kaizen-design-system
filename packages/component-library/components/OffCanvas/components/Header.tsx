@@ -1,17 +1,18 @@
+import * as React from "react"
+
 const closeIcon = require("@kaizen/component-library/icons/close.icon.svg")
   .default
-import * as React from "react"
-import IconButton from "../../Button/IconButton"
 
+import { IconButton } from "../../Button/IconButton"
 const styles = require("./Header.module.scss")
 
-type Props = {
+export type HeaderProps = {
   leftComponent: React.ReactNode
   onClose: (e: MouseEvent) => void
   heading: string
 }
 
-const Header = ({ leftComponent, onClose, heading }: Props) => (
+const Header = ({ leftComponent, onClose, heading }: HeaderProps) => (
   <div className={styles.root}>
     {leftComponent}
     <span className={styles.heading}>{heading}</span>
@@ -19,4 +20,4 @@ const Header = ({ leftComponent, onClose, heading }: Props) => (
   </div>
 )
 
-export default Header
+export { Header }

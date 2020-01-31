@@ -1,6 +1,6 @@
 import { cleanup, render } from "@testing-library/react"
 import * as React from "react"
-import InlineNotification from "./InlineNotification"
+import { InlineNotification } from "./InlineNotification"
 
 afterEach(cleanup)
 

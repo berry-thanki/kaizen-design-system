@@ -2,16 +2,13 @@ import * as React from "react"
 
 const emptyIcon = require("@kaizen/component-library/icons/empty.icon.svg")
   .default
-const printIcon = require("@kaizen/component-library/icons/print.icon.svg")
-  .default
 const successIcon = require("@kaizen/component-library/icons/success.icon.svg")
   .default
-
 import { Icon } from "@kaizen/component-library"
 
 const styles = require("./VerticalProgressIndicator.module.scss")
 
-export type Props = {
+export type VerticalProgressIndicatorProps = {
   position: Position
   completion: Completion
 }
@@ -31,7 +28,10 @@ export type Completion =
  * @param position - The position of this step in a list of steps i.e. is it at the start, middle or end
  * @param completion - Whether the step is completed, upcoming or a shade inbetween, current, or to-do
  */
-export const VerticalProgressIndicator = ({ position, completion }: Props) => {
+export const VerticalProgressIndicator = ({
+  position,
+  completion,
+}: VerticalProgressIndicatorProps) => {
   const getIconClassName: () => string = () => {
     if (completion == "upcoming") {
       return styles.upcomingIcon

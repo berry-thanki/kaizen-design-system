@@ -3,7 +3,7 @@ import GenericNotification, {
   NotificationType,
 } from "./components/GenericNotification"
 
-type Props = {
+export type ToastNotificationProps = {
   type: NotificationType
   title: string
   children: React.ReactNode
@@ -14,7 +14,10 @@ type Props = {
   automationId?: string
 }
 
-const ToastNotification = ({ hideCloseIcon, ...otherProps }: Props) => {
+const ToastNotification = ({
+  hideCloseIcon,
+  ...otherProps
+}: ToastNotificationProps) => {
   const persistent = otherProps.autohide && hideCloseIcon
 
   return (
@@ -32,4 +35,4 @@ ToastNotification.defaultProps = {
   autohideDelay: "short",
 }
 
-export default ToastNotification
+export { ToastNotification }

@@ -6,19 +6,19 @@ import { uuidFromString } from "../../util/uuidFromString"
 
 const styles = require("./Icon.module.scss")
 
-type RolesType =
+export type RolesType =
   | "img" // meaningful, title should be read aloud to users who can't see it
   | "presentation" // decorative, should be silent to users who can't see it
 
-type Icon = React.FunctionComponent<{
+export type IconProps = {
   icon: React.SVGAttributes<SVGSymbolElement>
   inheritSize?: boolean
   role?: RolesType
   title?: string
   desc?: string
-}>
+}
 
-const Icon: Icon = ({
+export const Icon: React.FunctionComponent<IconProps> = ({
   icon,
   inheritSize = false,
   role = "img",
@@ -79,5 +79,3 @@ const Icon: Icon = ({
     </svg>
   )
 }
-
-export default Icon

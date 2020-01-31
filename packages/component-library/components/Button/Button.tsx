@@ -7,4 +7,4 @@ const Button: React.FunctionComponent<ButtonProps> = props => (
 
 Button.displayName = "Button"
 
-export default Button
+export { Button, ButtonProps }

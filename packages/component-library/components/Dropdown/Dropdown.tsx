@@ -1,19 +1,20 @@
+import classNames from "classnames"
+import * as React from "react"
+
 import { Icon } from "@kaizen/component-library"
 const chevronDownIcon = require("@kaizen/component-library/icons/chevron-down.icon.svg")
   .default
 const ellipsisIcon = require("@kaizen/component-library/icons/ellipsis.icon.svg")
   .default
-import classNames from "classnames"
-import * as React from "react"
-import DropdownMenu from "./DropdownMenu"
 
+import DropdownMenu from "./DropdownMenu"
 const styles = require("./Dropdown.module.scss")
 
-type DropdownState = {
+export type DropdownState = {
   isMenuVisible: boolean
 }
 
-type DropdownProps = {
+export type DropdownProps = {
   icon?: React.SVGAttributes<SVGSymbolElement>
   label?: React.ReactNode
   menuVisible?: boolean
@@ -23,10 +24,7 @@ type DropdownProps = {
   iconPosition?: "start" | "end"
 }
 
-export default class Dropdown extends React.Component<
-  DropdownProps,
-  DropdownState
-> {
+export class Dropdown extends React.Component<DropdownProps, DropdownState> {
   static displayName = "Dropdown"
   dropdownButton = React.createRef<HTMLButtonElement>()
 
