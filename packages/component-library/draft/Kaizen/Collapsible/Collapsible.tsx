@@ -31,7 +31,7 @@ export type Props = {
   controlled?: boolean
 }
 
-type State = {
+export type State = {
   open: boolean
 }
 

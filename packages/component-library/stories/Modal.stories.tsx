@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { loadElmStories } from "@cultureamp/elm-storybook"
 import { action } from "@storybook/addon-actions"
 import { storiesOf } from "@storybook/react"
@@ -506,6 +507,7 @@ storiesOf("Modal (React)", module)
     </>
   ))
 
+  // @ts-ignore
   .add("Generic modal (without action)", () => (
     <>
       <ModalStateContainer isInitiallyOpen={true}>

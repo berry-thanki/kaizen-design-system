@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Radio } from "@kaizen/component-library/draft"
 import { storiesOf } from "@storybook/react"
 import * as React from "react"

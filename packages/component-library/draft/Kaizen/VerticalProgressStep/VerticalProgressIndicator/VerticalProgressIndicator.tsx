@@ -11,12 +11,12 @@ import { Icon } from "@kaizen/component-library"
 
 const styles = require("./VerticalProgressIndicator.module.scss")
 
-type Props = {
+export type Props = {
   position: Position
   completion: Completion
 }
 
-type Position = "start" | "middle" | "end"
+export type Position = "start" | "middle" | "end"
 export type Completion =
   | "upcoming"
   | "current-inactionable"
@@ -32,11 +32,6 @@ export type Completion =
  * @param completion - Whether the step is completed, upcoming or a shade inbetween, current, or to-do
  */
 export const VerticalProgressIndicator = ({ position, completion }: Props) => {
-  const iconMap = {
-    upcoming: emptyIcon,
-    current: printIcon,
-    completed: successIcon,
-  }
   const getIconClassName: () => string = () => {
     if (completion == "upcoming") {
       return styles.upcomingIcon

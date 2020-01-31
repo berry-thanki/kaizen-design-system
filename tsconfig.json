@@ -10,6 +10,9 @@
     "noImplicitAny": false,
     "strict": true,
     "allowJs": true,
-    "noEmit": true
-  }
+    "noEmit": true,
+    "target": "es2017"
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
 }

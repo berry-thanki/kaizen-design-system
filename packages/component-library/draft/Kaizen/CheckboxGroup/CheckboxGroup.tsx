@@ -11,7 +11,7 @@ export type CheckboxGroupProps = {
   noBottomMargin?: boolean
 }
 
-type CheckboxGroup = React.FunctionComponent<CheckboxGroupProps>
+export type CheckboxGroup = React.FunctionComponent<CheckboxGroupProps>
 
 const CheckboxGroup: CheckboxGroup = ({
   automationId,

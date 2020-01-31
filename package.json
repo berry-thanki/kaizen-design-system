@@ -102,5 +102,9 @@
     "typescript": "^3.6.3",
     "typescript-tslint-plugin": "^0.5.4",
     "webpack": "^4.40.2"
+  },
+  "devDependencies": {
+    "react-docgen-typescript-loader": "^3.6.0",
+    "ts-loader": "^6.2.1"
   }
 }

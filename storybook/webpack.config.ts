@@ -121,10 +121,20 @@ const elm: Rule = {
   ],
 }
 
+// const storybookSource: Rule = {
+//   test: /\.stories\.tsx?$/,
+//   loaders: [require.resolve("@storybook/source-loader")],
+//   enforce: "pre",
+// }
+
 const storybookSource: Rule = {
-  test: /\.stories\.tsx?$/,
-  loaders: [require.resolve("@storybook/source-loader")],
-  enforce: "pre",
+  // test: /\.stories\.tsx?$/,
+  test: /^((?!\.stories).)*\.tsx?$/,
+  include: resolve(__dirname, "../packages/component-library"),
+  use: [
+    require.resolve("ts-loader"),
+    require.resolve("react-docgen-typescript-loader"),
+  ],
 }
 
 const removeSvgFromTest = (rule: Rule): Rule => {
