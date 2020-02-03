@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react"
 
 const styles = require("./Dropdown.module.scss")
@@ -14,7 +15,7 @@ type DropdownMenuProps = {
 
 export default class DropdownMenu extends React.Component<DropdownMenuProps> {
   static displayName = "DropdownMenu"
-  menu = React.createRef<HTMLDivElement>()
+  private menu = React.createRef<HTMLDivElement>()
 
   componentDidMount() {
     document.addEventListener("click", this.handleDocumentClick, false)

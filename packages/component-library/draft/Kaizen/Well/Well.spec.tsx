@@ -1,8 +1,8 @@
+// @ts-nocheck
 import { cleanup, fireEvent, render } from "@testing-library/react"
 import * as React from "react"
 
-import { Well } from "."
-import { WellProps } from "./Well"
+import { Well, WellProps } from "."
 
 afterEach(cleanup)
 

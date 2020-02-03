@@ -8,7 +8,7 @@ import { ID_DESCRIBEDBY, ID_LABELLEDBY } from "./constants"
 
 const styles = require("./GenericModal.scss")
 
-interface Props {
+interface GenericModalProps {
   readonly isOpen: boolean
   readonly children: React.ReactNode
   readonly onEscapeKeyup?: (event: KeyboardEvent) => void
@@ -17,7 +17,7 @@ interface Props {
 
 const MODAL_TRANSITION_TIMEOUT = 350
 
-class GenericModal extends React.Component<Props> {
+class GenericModal extends React.Component<GenericModalProps> {
   scrollLayer: HTMLDivElement | null = null
   modalLayer: HTMLDivElement | null = null
 
@@ -25,7 +25,7 @@ class GenericModal extends React.Component<Props> {
     if (this.props.isOpen) this.onOpen()
   }
 
-  componentDidUpdate(prevProps: Props) {
+  componentDidUpdate(prevProps: GenericModalProps) {
     const hasJustOpened = !prevProps.isOpen && this.props.isOpen
     const hasJustClosed = prevProps.isOpen && !this.props.isOpen
     if (hasJustOpened) this.onOpen()

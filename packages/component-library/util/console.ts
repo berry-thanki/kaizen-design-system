@@ -2,20 +2,20 @@ const red = "\u001b[31m "
 const yellow = "\u001b[33m "
 const reset = "\u001b[0m "
 
-export const error = (message: string) => {
+export const error = (message: string): Error => {
   throw new Error(
     `${red}\nCULTUREAMP UI ERROR:\n${singleLine(message)}${reset}\n`
   )
 }
 
-export const warn = (message: string) => {
+export const warn = (message: string): void => {
   console.warn(
     `${yellow}\nCULTUREAMP UI WARNING:\n${singleLine(message)}${reset}\n`
   )
 }
 
-export const singleLine = (string: string) => {
-  return string
+export const singleLine = (message: string): string => {
+  return message
     .replace(/^ +/gm, " ")
     .replace(/\n|\r/gm, "")
     .trim()

@@ -9,7 +9,7 @@ const successIcon = require("@kaizen/component-library/icons/success.icon.svg")
   .default
 const styles = require("./Tag.scss")
 
-type Variant =
+export type Variant =
   | "default"
   | "sentimentPositive"
   | "sentimentNeutral"
@@ -130,4 +130,4 @@ const Tag = (props: Props) => {
   )
 }
 
-export default Tag
+export { Tag }

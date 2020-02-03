@@ -1,3 +1,4 @@
+// @ts-nocheck
 import classnames from "classnames"
 import * as React from "react"
 
@@ -12,7 +13,7 @@ export type VariantType =
 
 export type BorderStyleType = "solid" | "dashed" | "none"
 
-export type WellProps = {
+export interface WellProps {
   id?: string
   automationId?: string
   variant?: VariantType

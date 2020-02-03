@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { loadElmStories } from "@cultureamp/elm-storybook"
 import { action } from "@storybook/addon-actions"
 import { storiesOf } from "@storybook/react"

@@ -13,7 +13,7 @@ const chevronDown = require("@kaizen/component-library/icons/chevron-down.icon.s
 
 export type Props = {
   id: string
-  children: JSX.Element | JSX.Element[] | string
+  children?: JSX.Element | JSX.Element[] | string | React.ReactNode
   title: string
   renderHeader?: (title: string) => JSX.Element | JSX.Element[]
   open?: boolean

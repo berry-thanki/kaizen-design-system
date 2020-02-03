@@ -4,8 +4,15 @@ import { Icon } from "../../Icon/Icon"
 
 const styles = require("./GenericButton.module.scss")
 
-type GenericProps = {
+interface GenericProps {
+  /**
+   * HTML Attribute. Displayed on the wrapper
+   */
   id?: string
+
+  /**
+   *
+   */
   label: string
   destructive?: boolean
   disabled?: boolean
@@ -22,14 +29,14 @@ type GenericProps = {
   analytics?: Analytics
 }
 
-type LabelProps = {
+export interface LabelProps {
   iconPosition?: "start" | "end"
   primary?: boolean
   secondary?: boolean
   reverseColor?: "lapis" | "ocean" | "peach" | "seedling" | "wisteria" | "yuzu"
 }
 
-type Analytics = {
+export type Analytics = {
   eventName: string
   properties: Object
 }

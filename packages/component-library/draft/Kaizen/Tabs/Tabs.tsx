@@ -1,3 +1,4 @@
+// @ts-nocheck
 import classnames from "classnames"
 import * as React from "react"
 
@@ -26,7 +27,7 @@ const Tabs = (props: Props) => {
 
   return (
     <div className={styles.container}>
-      {tabs.map(t => {
+      {tabs.map((t: Tab) => {
         return renderTab ? (
           renderTab({
             tab: t,

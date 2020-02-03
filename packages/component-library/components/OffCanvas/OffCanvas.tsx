@@ -1,3 +1,4 @@
+// @ts-nocheck
 import classNames from "classnames"
 import * as React from "react"
 import { Header } from "./components/Header"

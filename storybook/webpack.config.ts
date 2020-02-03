@@ -121,19 +121,24 @@ const elm: Rule = {
   ],
 }
 
-// const storybookSource: Rule = {
-//   test: /\.stories\.tsx?$/,
-//   loaders: [require.resolve("@storybook/source-loader")],
-//   enforce: "pre",
-// }
-
 const storybookSource: Rule = {
-  // test: /\.stories\.tsx?$/,
-  test: /^((?!\.stories).)*\.tsx?$/,
+  test: /\.tsx?$/,
   include: resolve(__dirname, "../packages/component-library"),
   use: [
-    require.resolve("ts-loader"),
-    require.resolve("react-docgen-typescript-loader"),
+    {
+      loader: require.resolve("ts-loader"),
+      options: {
+        reportFiles: [
+          "!**/component-library/**/*.{ts,tsx}",
+          "**/component-library/Text/**/*.{ts,tsx}",
+          // @TODO - there's a heck of a lot of files with type errors
+          // as these are addressed, they should be added to reportFiles
+        ],
+      },
+    },
+    {
+      loader: require.resolve("react-docgen-typescript-loader"),
+    },
   ],
 }
 

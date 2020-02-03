@@ -6,7 +6,7 @@ import Media from "react-media"
 
 import { Icon } from "@kaizen/component-library/components/Icon/Icon"
 import { MOBILE_QUERY } from "@kaizen/component-library/components/NavigationBar/constants"
-import { Tag } from "@kaizen/component-library/draft"
+import { Tag, Variant } from "@kaizen/component-library/draft"
 const backIcon = require("@kaizen/component-library/icons/arrow-backward.icon.svg")
   .default
 const forwardIcon = require("@kaizen/component-library/icons/arrow-forward.icon.svg")
@@ -97,17 +97,19 @@ class TitleBlock extends React.Component<TitleBlockProps, TitleBlockState> {
     const { surveyStatus } = this.props
     if (surveyStatus == undefined) return
 
-    let variant
+    let ReturnTag: Element | null = null
     if (surveyStatus.status === "draft") {
-      variant = "statusDraft"
+      // @ts-ignore
+      ReturnTag = <Tag variant="statusDraft">{surveyStatus.text}</Tag>
     }
     if (surveyStatus.status === "live") {
-      variant = "statusLive"
+      // @ts-ignore
+      ReturnTag = <Tag variant="statusLive">{surveyStatus.text}</Tag>
     }
 
     return (
       <div className={styles.tag}>
-        <Tag variant={variant}>{surveyStatus.text}</Tag>
+        {ReturnTag !== null ? ReturnTag : <Tag>{surveyStatus.text}</Tag>}
       </div>
     )
   }
@@ -150,7 +152,7 @@ class TitleBlock extends React.Component<TitleBlockProps, TitleBlockState> {
   }
 
   renderNavigation = () => {
-    const { navigationButtons, reversed } = this.props
+    const { navigationButtons, reversed = false } = this.props
     if (navigationButtons == undefined) return
 
     return (

@@ -50,7 +50,7 @@ const filterNames = (inputValue: string) => {
   )
 }
 
-const promiseOptions = inputValue =>
+const promiseOptions = (inputValue: string) =>
   new Promise(resolve => {
     setTimeout(() => {
       resolve(filterNames(inputValue))

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react"
 const styles = require("./NavigationButton.scss")
 const titleblockStyles = require("./TitleBlock.scss")
@@ -9,18 +10,21 @@ export type NavigationButton = {
   active: boolean
 }
 
-type Props = {
+type NavigationButtonsProps = {
   navigationButtons: Array<NavigationButton>
   reversed: boolean
 }
 
-const NavigationButtons = (props: Props) => {
+const NavigationButtons = ({
+  navigationButtons,
+  reversed,
+}: NavigationButtonsProps) => {
   return (
     <React.Fragment>
-      {props.navigationButtons.map(b => (
+      {navigationButtons.map(b => (
         <a
           className={classNames({
-            [styles.reversed]: props.reversed,
+            [styles.reversed]: reversed,
             [styles.button]: !b.active,
             [styles.activeButton]: b.active,
           })}
@@ -34,10 +38,7 @@ const NavigationButtons = (props: Props) => {
   )
 }
 
-NavigationButtons.defaultProps = {
-  reversed: false,
-}
-
+// @ts-ignore
 NavigationButtons.displayName = "NavigationButtons"
 
 export default NavigationButtons

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import classnames from "classnames"
 import * as React from "react"
 
@@ -12,9 +13,7 @@ export type FieldMessageProps = {
   reversed?: boolean
 }
 
-type FieldMessage = React.SFC<FieldMessageProps>
-
-const FieldMessage: FieldMessage = ({
+const FieldMessage: React.SFC<FieldMessageProps> = ({
   id,
   automationId,
   message,
@@ -34,4 +33,4 @@ const FieldMessage: FieldMessage = ({
   </div>
 )
 
-export default FieldMessage
+export { FieldMessage }

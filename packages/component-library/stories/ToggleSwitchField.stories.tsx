@@ -3,15 +3,24 @@ import { storiesOf } from "@storybook/react"
 import * as React from "react"
 import { ToggledStatus, ToggleSwitchField, ToggleTheme } from "../draft"
 
+type ChildrenRenderProps = {
+  // @ts-ignore
+  toggledStatus: ToggledStatus
+  toggle: () => void
+}
+
+interface ToggleStateContainerProps {
+  initialToggledStatus: ToggledStatus
+  children: (renderProps: ChildrenRenderProps) => React.ReactNode
+}
+
+interface ToggleStateContainerState {
+  toggledStatus: ToggledStatus
+}
+
 class ToggleStateContainer extends React.Component<
-  {
-    initialToggledStatus: ToggledStatus
-    children: (renderProps: {
-      toggledStatus: ToggledStatus
-      toggle: () => void
-    }) => React.ReactNode
-  },
-  { toggledStatus: ToggledStatus }
+  ToggleStateContainerProps,
+  ToggleStateContainerState
 > {
   state = {
     toggledStatus: this.props.initialToggledStatus,

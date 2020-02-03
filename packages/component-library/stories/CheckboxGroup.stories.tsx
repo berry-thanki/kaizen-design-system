@@ -2,7 +2,6 @@ import { CheckboxField, CheckboxGroup } from "@kaizen/component-library/draft"
 import { Label } from "@kaizen/component-library/draft"
 import { storiesOf } from "@storybook/react"
 import * as React from "react"
-const styles = require("./CheckboxGroup.stories.scss")
 
 type RenderProps = {
   checkedStatus: string

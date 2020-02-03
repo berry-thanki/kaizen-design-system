@@ -1,16 +1,17 @@
+// @ts-nocheck
 import * as React from "react"
 const styles = require("./Tooltip.scss")
 import classnames from "classnames"
 
 type Position = "above" | "below"
 
-type Props = {
+export interface TooltipProps {
   position?: Position
   text: string
   children?: React.ReactNode
 }
 
-const Tooltip = (props: Props) => {
+const Tooltip = (props: TooltipProps) => {
   return (
     <div className={styles.tooltipWrap}>
       {props.children}
@@ -48,10 +49,6 @@ const Tooltip = (props: Props) => {
       </div>
     </div>
   )
-}
-
-Tooltip.defaultProps = {
-  position: "above",
 }
 
 export default Tooltip

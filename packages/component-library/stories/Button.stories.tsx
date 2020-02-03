@@ -1,12 +1,18 @@
 import { loadElmStories } from "@cultureamp/elm-storybook"
-import { Button } from "@kaizen/component-library"
-const configureIcon = require("@kaizen/component-library/icons/configure.icon.svg")
-  .default
 import { action } from "@storybook/addon-actions"
+import { withInfo } from "@storybook/addon-info"
 import { storiesOf } from "@storybook/react"
 import * as React from "react"
 
+import { Button } from "../components/Button/Button"
+const configureIcon = require("@kaizen/component-library/icons/configure.icon.svg")
+  .default
+
 storiesOf("Button (React)", module)
+  .add(
+    "Button example",
+    withInfo({ inline: true })(() => <Button label="Label" />)
+  )
   .add("Default (Kaizen Site Demo)", () => <Button label="Label" />)
   .add("Default, Disabled", () => <Button label="Label" disabled={true} />)
   .add("Primary", () => <Button label="Label" primary={true} />)

@@ -26,11 +26,11 @@ export type MenuProps = {
   mobileEnabled?: boolean
 }
 
-type State = {
+export type MenuState = {
   open: boolean
 }
 
-export default class Menu extends React.Component<MenuProps, State> {
+export default class Menu extends React.Component<MenuProps, MenuState> {
   rootRef = React.createRef<HTMLElement>()
 
   static displayName = "Menu"

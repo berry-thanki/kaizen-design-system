@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react"
 import { ID_DESCRIBEDBY } from "./constants"
 

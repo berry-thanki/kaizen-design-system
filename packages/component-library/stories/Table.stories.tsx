@@ -172,7 +172,7 @@ storiesOf("Table (React)", module)
   ))
   .add("Expanded (deprecated)", () => {
     const [expandedId, setExpandedId] = React.useState<string | null>("second")
-    const toggleExpanded = id => {
+    const toggleExpanded = (id: string) => {
       if (expandedId === id) {
         setExpandedId(null)
         return
@@ -209,7 +209,8 @@ storiesOf("Table (React)", module)
   })
   .add("Expanded popout", () => {
     const [expandedId, setExpandedId] = React.useState<string | null>("second")
-    const toggleExpanded = id => {
+    const tableCards: string[] = ["first", "second", "third"]
+    const toggleExpanded = (id: string) => {
       if (expandedId === id) {
         setExpandedId(null)
         return
@@ -222,7 +223,7 @@ storiesOf("Table (React)", module)
           <TableHeader>
             <ExampleTableHeaderRow checkable />
           </TableHeader>
-          {["first", "second", "third"].map(id => {
+          {tableCards.map(id => {
             const expanded = expandedId === id
             return (
               <TableCard
@@ -260,7 +261,7 @@ storiesOf("Table (React)", module)
   })
   .add("Expanded with custom content (deprecated)", () => {
     const [expandedId, setExpandedId] = React.useState<string | null>("second")
-    const toggleExpanded = id => {
+    const toggleExpanded = (id: string) => {
       if (expandedId === id) {
         setExpandedId(null)
         return

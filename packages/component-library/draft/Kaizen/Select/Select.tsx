@@ -68,6 +68,8 @@ const Control: typeof components.Control = props => (
 )
 
 const Placeholder: typeof components.Placeholder = props => (
+  // Suppress typing issue - looks like the type defs are incorrect
+  // @ts-ignore
   <components.Placeholder {...props}>
     <span className={styles.placeholder}>{props.children}</span>
   </components.Placeholder>
