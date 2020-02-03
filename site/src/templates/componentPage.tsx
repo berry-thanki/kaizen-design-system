@@ -63,6 +63,7 @@ export default ({ data, pageContext, location }) => {
       headingText={md.frontmatter.title}
       summaryParagraph={md.frontmatter.summaryParagraph}
       tags={md.frontmatter.tags}
+      headerImageName={md.frontmatter.headerImage}
     />
   )
 
@@ -117,6 +118,7 @@ export const query = graphql`
         tags
         needToKnow
         summaryParagraph
+        headerImage
         demoStoryId
         demoStoryHeight
       }
