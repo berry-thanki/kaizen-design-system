@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-config-prettier"],
+  "extends": ["tslint-config-prettier", "tslint:latest"],
   "linterOptions": {
     "exclude": ["**/*.js?(x)"]
   },
@@ -9,6 +9,9 @@
       "dev",
       ["@kaizen", "@storybook", "@testing-library", "react", "react-dom"]
     ],
-    "ordered-imports": true
+    "ordered-imports": true,
+    "semicolon": false,
+    "no-submodule-imports": false,
+    "no-var-requires": false
   }
 }

@@ -1,9 +1,10 @@
+// @ts-nocheck
 import classNames from "classnames"
 import * as React from "react"
 
 const styles = require("./Text.module.scss")
 
-type TextProps = {
+interface TextProps {
   tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "div" | "span" | "label"
   style?:
     | "default-style"
@@ -45,4 +46,4 @@ const Text: React.FunctionComponent<TextProps> = ({
 
 Text.displayName = "Text"
 
-export default Text
+export { Text, TextProps }

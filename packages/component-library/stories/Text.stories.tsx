@@ -1,9 +1,17 @@
 import { loadElmStories } from "@cultureamp/elm-storybook"
-import { Text } from "@kaizen/component-library"
+import { withInfo } from "@storybook/addon-info"
 import { storiesOf } from "@storybook/react"
 import * as React from "react"
 
+import { Text } from "../components/Text/Text"
+
 storiesOf("Text (React)", module)
+  .add(
+    "Text example",
+    withInfo({ inline: false })(() => (
+      <Text tag="h1">This is a Page Title (H1)</Text>
+    ))
+  )
   .add("H1", () => <Text tag="h1">This is a Page Title (H1)</Text>)
 
   .add("H1 (inherit baseline)", () => (

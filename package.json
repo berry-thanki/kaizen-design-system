@@ -53,6 +53,7 @@
     "@storybook/addon-backgrounds": "^5.2.5",
     "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-options": "^5.2.5",
+    "@storybook/addon-info": "^5.3.9",
     "@storybook/addon-storysource": "^5.2.5",
     "@storybook/addon-viewport": "^5.2.5",
     "@storybook/react": "^5.2.5",
@@ -101,9 +102,7 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.3",
     "typescript-tslint-plugin": "^0.5.4",
-    "webpack": "^4.40.2"
-  },
-  "devDependencies": {
+    "webpack": "^4.40.2",
     "react-docgen-typescript-loader": "^3.6.0",
     "ts-loader": "^6.2.1"
   }
