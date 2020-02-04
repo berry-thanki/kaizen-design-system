@@ -64,10 +64,12 @@ const PageHeader: React.SFC<PageHeaderProps> = ({
                   <img
                     src={data.amoeba.publicURL}
                     className={styles.imageBackdrop}
+                    alt=""
                   />
                   <img
                     src={headerImageURL || emptyStateHeaderImageURL}
                     className={styles.headerImage}
+                    alt=""
                   />
                 </div>
                 <div className={styles.tagsContainer}>
