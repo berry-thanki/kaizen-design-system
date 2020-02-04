@@ -1,66 +1,71 @@
 {
   "kz": {
     "typography": {
-      "heading": [
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        },
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        },
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        },
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        },
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        },
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        },
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        }
-      ],
-      "paragraph": [
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        }
-      ],
-      "pre": [
-        {
-          "fontFamily": "",
-          "fontSize": "",
-          "lineHeight": "",
-          "letterSpacing": ""
-        }
-      ]
+      "family": {
+        "mono": "IBM Flex Mono",
+        "display": "Greycliff CF",
+        "text": "Inter"
+      },
+      "weight": {
+        "bold": "600",
+        "regular": "400"
+      },
+      "size": {
+        "display": [
+          {
+            "fontSize": "72px",
+            "lineHeight": "72px"
+          },
+          {
+            "fontSize": "36px",
+            "lineHeight": "36px"
+          },
+          {
+            "fontSize": "30px",
+            "lineHeight": "36px"
+          },
+          {
+            "fontSize": "22px",
+            "lineHeight": "24px"
+          },
+          {
+            "fontSize": "18px",
+            "lineHeight": "24px"
+          },
+          {
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          {
+            "fontSize": "14px",
+            "lineHeight": "24px"
+          }
+        ],
+        "text": [
+          {
+            "fontSize": "20px",
+            "lineHeight": "30px"
+          },
+          {
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          {
+            "fontSize": "14px",
+            "lineHeight": "18px"
+          },
+          {
+            "fontSize": "12px",
+            "lineHeight": "18px"
+          }
+        ],
+        "mono": [
+          {
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        ]
+      }
     }
   }
 }
