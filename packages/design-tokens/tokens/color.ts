@@ -13,9 +13,4 @@ export interface Color {
   }
 }
 
-export const color: <N extends ColorNames>(
-  name: N,
-  variant: keyof ColorTokens[N]
-) => string = (n, v) => tokens.kz.color[n][String(v)]
-
 export const colorTokens: Color = tokens
