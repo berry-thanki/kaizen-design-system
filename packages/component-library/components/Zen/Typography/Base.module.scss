@@ -1,0 +1,50 @@
+@import "~@cultureamp/kaizen-binary-assets/lib/index";
+
+@font-face {
+  font-family: "Greycliff CF";
+  src: url(asset-url("fonts/greycliff/greycliff-cf-regular.woff"))
+    format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(asset-url("fonts/inter/inter-regular.woff2")) format("woff2"),
+    url(asset-url("fonts/inter/inter-regular.woff")) format("woff"); /* IE11 fallback */
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url(asset-url("fonts/ibm-plex-mono/ibm-plex-mono-regular.woff2"))
+      format("woff2"),
+    url(asset-url("fonts/ibm-plex-mono/ibm-plex-mono-regular.woff"))
+      format("woff"); /* IE11 fallback */
+  font-weight: normal;
+}
+
+$ca-grid: 1.5rem;
+
+$spacing-list: (
+  ("eighth", $ca-grid/8),
+  ("quarter", $ca-grid/4),
+  ("half", $ca-grid/2),
+  ("0", $ca-grid * 0),
+  ("1", $ca-grid),
+  ("2", $ca-grid * 2),
+  ("4", $ca-grid * 4),
+  ("8", $ca-grid * 8)
+);
+
+$ca-grid: 1.5rem; // 24px
+
+$breakpoints: (("mobile", 0px), ("tablet", 768px), ("desktop", 1024px));
+
+.pre {
+  // figure out fallbacks and i18n
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}

@@ -1,0 +1,37 @@
+$breakpoints: (("mobile", 0px), ("tablet", 768px), ("desktop", 1024px));
+
+// @TODO - pull these from Kaizen tokens
+$font-size-map: (
+  (xs, 12px, 18px),
+  (sm, 14px, 18px),
+  (md, 16px, 24px),
+  (lg, 20px, 30px)
+);
+
+@each $screen, $min in $breakpoints {
+  @media (min-width: #{$min}) {
+    @each $query, $font-size, $line-height in $font-size-map {
+      .size-#{$query}--#{$screen} {
+        font-family: "Inter";
+        font-style: normal;
+        font-size: $font-size;
+        line-height: $line-height;
+      }
+    }
+  }
+}
+
+@each $query, $font-size, $line-height in $font-size-map {
+  .size-#{$query} {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+// @TODO not convinced this is an idea we should entertain
+// it also doesn't work
+.paragraph.link {
+  text-decoration: underline;
+}

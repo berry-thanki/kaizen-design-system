@@ -1,0 +1,21 @@
+@import "~@cultureamp/kaizen-design-tokens/sass/color";
+
+.link {
+  font-family: "Inter";
+  color: $kz-color-cluny-500;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: $kz-color-cluny-400;
+  }
+  &:active,
+  &:focus {
+    outline-color: $kz-color-wisteria-700;
+    outline-offset: 2px;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
