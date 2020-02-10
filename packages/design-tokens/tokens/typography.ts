@@ -1,20 +1,29 @@
-import * as typography from "./typography.json"
+import * as typographyTokens from "./typography.json"
 
-export type FamilyTokens = typeof typography.kz.typography.family
-export type WeightTokens = typeof typography.kz.typography.weight
-export type SizeTokens = {
-  fontSize: string
-  lineHeight: string
-}
+export type FamilyTokens = typeof typographyTokens.kz.typography.family
+export type WeightTokens = typeof typographyTokens.kz.typography.weight
+
+type Scale = { [key: string]: string }
 
 export interface Typography {
   kz: {
-    family: FamilyTokens
-    weight: WeightTokens
-    size: {
-      display: SizeTokens[]
-      text: SizeTokens[]
-      mono: SizeTokens[]
+    typography: {
+      family: FamilyTokens
+      weight: WeightTokens
+      display: {
+        fontSize: Scale
+        lineHeight: Scale
+      }
+      text: {
+        fontSize: Scale
+        lineHeight: Scale
+      }
+      mono: {
+        fontSize: Scale
+        lineHeight: Scale
+      }
     }
   }
 }
+
+export const typography: Typography = typographyTokens
